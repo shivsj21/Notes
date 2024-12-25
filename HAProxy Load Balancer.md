@@ -1,4 +1,4 @@
-###Update and Install HAProxy
+### Update and Install HAProxy
 ```sh
 sudo apt update
 sudo apt install haproxy -y
