@@ -1,12 +1,9 @@
-### Update and Install HAProxy
+### Update and Install HAProxy & Check HAProxy Version
 ```sh
 sudo apt update
 sudo apt install haproxy -y
 haproxy -v
 ```
-
-2. **Check HAProxy Version**  
-   Command to verify HAProxy installation and version.
 
 3. **Run Backend Services for Testing**  
    Instructions to set up two simple HTTP servers on ports 8081 and 8082.
@@ -31,11 +28,13 @@ haproxy -v
 
 
 
-=> Run two backend services (for testing):
-	Open two terminal windows and run these commands in each:
+### Run two backend services (for testing):
+- Open two terminal windows and run these commands in each:
 
-	=> First terminal:
-		python3 -m http.server 8081
+## First terminal:
+```sh
+python3 -m http.server 8081
+```
 	=> Second terminal:
 		python3 -m http.server 8082
 
