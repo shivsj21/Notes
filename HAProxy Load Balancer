@@ -1,6 +1,34 @@
+###Update and Install HAProxy
+```sh
 sudo apt update
 sudo apt install haproxy -y
 haproxy -v
+```
+
+2. **Check HAProxy Version**  
+   Command to verify HAProxy installation and version.
+
+3. **Run Backend Services for Testing**  
+   Instructions to set up two simple HTTP servers on ports 8081 and 8082.
+
+4. **Edit HAProxy Configuration File**  
+   Steps to configure HAProxy with frontend and backend settings.
+
+5. **Verify HAProxy Configuration Syntax**  
+   Command to check the HAProxy configuration for syntax errors.
+
+6. **Restart HAProxy Service**  
+   Command to restart the HAProxy service to apply changes.
+
+7. **Test HAProxy Load Balancing**  
+   Steps to test load balancing by accessing the configured IP in a browser.
+
+8. **Remove HAProxy (Optional)**  
+   Command to remove HAProxy and clean up the installation.
+
+
+
+
 
 
 => Run two backend services (for testing):
