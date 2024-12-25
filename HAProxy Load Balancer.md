@@ -18,8 +18,10 @@ python3 -m http.server 8082
 ```
 - Instructions to set up two simple HTTP servers on ports 8081 and 8082.
 
-### Edit HAProxy Configuration File**  
-   Steps to configure HAProxy with frontend and backend settings.
+### Edit HAProxy Configuration File  
+```sh
+   sudo vim /etc/haproxy/haproxy.cfg
+```
 
 5. **Verify HAProxy Configuration Syntax**  
    Command to check the HAProxy configuration for syntax errors.
@@ -30,9 +32,8 @@ python3 -m http.server 8082
 
 
 
-=> Configure HAProxy:
 
-	sudo vim /etc/haproxy/haproxy.cfg
+	
 
 // In this configuration:
 //server1 is running on port 8081 of the same machine (127.0.0.1 is the loopback IP).
@@ -52,9 +53,10 @@ python3 -m http.server 8082
 => Check HAProxy Configuration syntax
             haproxy -c -f /etc/haproxy/haproxy.cfg
 
-Restart HAProxy Service**              
-=> Restart HAProxy:
-	sudo systemctl restart haproxy
+### Restart HAProxy Service
+```sh
+sudo systemctl restart haproxy
+```
 
 Test HAProxy Load Balancing
 => Test the Configuration:
