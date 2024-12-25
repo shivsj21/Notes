@@ -8,15 +8,15 @@ haproxy -v
 ### Run two backend services (for testing):
 - Open two terminal windows and run these commands in each:
 
-#### First terminal:
-```sh
-python3 -m http.server 8081
-```
-#### Second terminal:
-```sh
-python3 -m http.server 8082
-```
-- Instructions to set up two simple HTTP servers on ports 8081 and 8082.
+	#### First terminal:
+	```sh
+	python3 -m http.server 8081
+	```
+	#### Second terminal:
+	```sh
+	python3 -m http.server 8082
+	```
+	- Instructions to set up two simple HTTP servers on ports 8081 and 8082.
 
 ### Edit HAProxy Configuration File  
 ```sh
