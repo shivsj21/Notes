@@ -5,29 +5,6 @@ sudo apt install haproxy -y
 haproxy -v
 ```
 
-3. **Run Backend Services for Testing**  
-   Instructions to set up two simple HTTP servers on ports 8081 and 8082.
-
-4. **Edit HAProxy Configuration File**  
-   Steps to configure HAProxy with frontend and backend settings.
-
-5. **Verify HAProxy Configuration Syntax**  
-   Command to check the HAProxy configuration for syntax errors.
-
-6. **Restart HAProxy Service**  
-   Command to restart the HAProxy service to apply changes.
-
-7. **Test HAProxy Load Balancing**  
-   Steps to test load balancing by accessing the configured IP in a browser.
-
-8. **Remove HAProxy (Optional)**  
-   Command to remove HAProxy and clean up the installation.
-
-
-
-
-
-
 ### Run two backend services (for testing):
 - Open two terminal windows and run these commands in each:
 
@@ -39,7 +16,16 @@ python3 -m http.server 8081
 ```sh
 python3 -m http.server 8082
 ```
-- These commands will run two simple HTTP servers on ports 8081 and 8082.
+- Instructions to set up two simple HTTP servers on ports 8081 and 8082.
+
+### Edit HAProxy Configuration File**  
+   Steps to configure HAProxy with frontend and backend settings.
+
+5. **Verify HAProxy Configuration Syntax**  
+   Command to check the HAProxy configuration for syntax errors.
+
+
+
 
 
 
@@ -66,14 +52,16 @@ python3 -m http.server 8082
 => Check HAProxy Configuration syntax
             haproxy -c -f /etc/haproxy/haproxy.cfg
 
-            
+Restart HAProxy Service**              
 => Restart HAProxy:
 	sudo systemctl restart haproxy
 
-
+Test HAProxy Load Balancing
 => Test the Configuration:
 	Now, open a browser and go to http://192.168.1.6. 
 	HAProxy will balance requests between the two services running on ports 8081 and 8082.
 	
-	
-	sudo apt remove --purge haproxy
+### Remove HAProxy
+```sh
+sudo apt remove --purge haproxy
+```
