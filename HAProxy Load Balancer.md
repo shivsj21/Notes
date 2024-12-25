@@ -40,13 +40,8 @@ haproxy -v
 
 ```
 
-5. **Verify HAProxy Configuration Syntax**  
-   Command to check the HAProxy configuration for syntax errors.
-
-	
-
             
-### Check HAProxy Configuration syntax
+### Verify HAProxy Configuration Syntax
 ```sh
 haproxy -c -f /etc/haproxy/haproxy.cfg
 ```
