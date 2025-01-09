@@ -1,25 +1,19 @@
 # Step 1: Prepare Your Droplet
-1. Connect to your droplet via SSH:
+- Connect to your droplet via SSH:
 ```sh
 ssh root@your-droplet-ip
 ```
-Update and upgrade your system:
-bash
-Copy code
+- Update and upgrade your system:
+```sh
 sudo apt update && sudo apt upgrade -y
-Step 2: Install Apache
-Install Apache:
-bash
-Copy code
+```
+
+# Step 2: Install Apache
+```sh
 sudo apt install apache2 -y
-Enable Apache to start on boot:
-bash
-Copy code
 sudo systemctl enable apache2
-Verify Apache is running:
-bash
-Copy code
 sudo systemctl status apache2
+```
 Step 3: Install PHP and Dependencies
 Add the required PHP repository:
 bash
