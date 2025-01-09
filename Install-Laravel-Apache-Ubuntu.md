@@ -78,29 +78,31 @@ sudo vim /etc/apache2/sites-available/laravel-app.conf
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
-### Enable the new configuration and mod_rewrite:
+- Enable the new configuration and mod_rewrite:
 ```sh
 sudo a2ensite laravel-app
 sudo a2enmod rewrite
 sudo systemctl restart apache2
 ```
 
-Step 7: Update .env for Database Connection
-Open the .env file:
-bash
-Copy code
+### Step 7: Update .env for Database Connection
+- Open the .env file:
+```sh
 nano /var/www/html/laravel-app/.env
-Update the database details:
-env
-Copy code
+```
+
+- Update the database details:
+```sh
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=laravel
 DB_USERNAME=root
-DB_PASSWORD=yourpassword
-Step 8: Install MySQL (if needed)
-Install MySQL:
+DB_PASSWORD=Redhat2040!
+```
+
+### Step 8: Install MySQL 
+- Install MySQL:
 bash
 Copy code
 sudo apt install mysql-server -y
