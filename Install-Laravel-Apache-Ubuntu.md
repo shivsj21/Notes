@@ -1,9 +1,11 @@
-Step 1: Prepare Your Droplet
-Update the System
+# Step 1: Prepare Your Droplet
+- Update the System
 Connect to your droplet via SSH:
 bash
 Copy code
+```sh
 ssh root@your-droplet-ip
+```
 Update and upgrade your system:
 bash
 Copy code
