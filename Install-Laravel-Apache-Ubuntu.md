@@ -1,8 +1,5 @@
 # Step 1: Prepare Your Droplet
-- Update the System
-Connect to your droplet via SSH:
-bash
-Copy code
+- Connect to your droplet via SSH:
 ```sh
 ssh root@your-droplet-ip
 ```
