@@ -120,35 +120,37 @@ EXIT;
 ```
 
 ### Step 9: Test Laravel
-Navigate to your domain or droplet IP:
-arduino
-Copy code
+- Navigate to your domain or droplet IP:
+```sh
 http://your-domain.com
+```
 You should see the Laravel welcome page.
-Step 10: Create a Simple Laravel Project
-Generate a Controller and Route
-Create a controller:
-bash
-Copy code
+
+### Step 10: Create a Simple Laravel Project
+#### Generate a Controller and Route
+- Create a controller:
+```sh
 php artisan make:controller HelloController
-Open the controller file and add a method:
-php
-Copy code
+```
+- Open the controller file and add a method:
+```sh
 // /app/Http/Controllers/HelloController.php
 public function greet()
 {
     return "Hello, DigitalOcean!";
 }
-Add a route in routes/web.php:
-php
-Copy code
-Route::get('/hello', [App\Http\Controllers\HelloController::class, 'greet']);
-Test the Route
-Navigate to:
+```
 
-arduino
-Copy code
+- Add a route in routes/web.php:
+```sh
+Route::get('/hello', [App\Http\Controllers\HelloController::class, 'greet']);
+```
+
+- Test the Route
+Navigate to:
+```sh
 http://your-domain.com/hello
+```
 You should see the message "Hello, DigitalOcean!".
 
 This guide gets Laravel running with Apache on Ubuntu. Let me know if you encounter any issues!
