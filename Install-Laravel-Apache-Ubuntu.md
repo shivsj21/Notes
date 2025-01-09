@@ -134,7 +134,8 @@ php artisan make:controller HelloController
 ```
 - Open the controller file and add a method:
 ```sh
-// /app/Http/Controllers/HelloController.php
+// /var/www/html/laravel-app/app/Http/Controllers/HelloController.php
+// Incide the class HelloController
 public function greet()
 {
     return "Hello, DigitalOcean!";
