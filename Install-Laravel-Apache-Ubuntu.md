@@ -66,7 +66,7 @@ sudo vim /etc/apache2/sites-available/laravel-app.conf
 - Add the following configuration:
 ```sh
 <VirtualHost *:80>
-    ServerName your-domain.com
+    ServerName your-domain.com   //or public ip of droplet
     DocumentRoot /var/www/html/laravel-app/public
 
     <Directory /var/www/html/laravel-app>
@@ -103,20 +103,22 @@ DB_PASSWORD=Redhat2040!
 
 ### Step 8: Install MySQL 
 - Install MySQL:
-bash
-Copy code
+```sh
 sudo apt install mysql-server -y
-Secure MySQL:
-bash
-Copy code
+```
+- Secure MySQL:
+```sh
 sudo mysql_secure_installation
-Log in to MySQL and create a database:
-bash
-Copy code
+```
+- Log in to MySQL and create a database:
+```sh
 mysql -u root -p
-sql
-Copy code
+```
+```sql
 CREATE DATABASE laravel;
+```
+
+
 EXIT;
 Step 9: Test Laravel
 Navigate to your domain or droplet IP:
