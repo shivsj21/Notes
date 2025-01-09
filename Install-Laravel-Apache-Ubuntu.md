@@ -114,7 +114,7 @@ sudo mysql_secure_installation
 ```sh
 mysql -u root -p
 ```
-```sql
+```sh
 CREATE DATABASE laravel;
 ```
 
