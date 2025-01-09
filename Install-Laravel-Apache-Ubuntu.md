@@ -14,32 +14,34 @@ sudo apt install apache2 -y
 sudo systemctl enable apache2
 sudo systemctl status apache2
 ```
-Step 3: Install PHP and Dependencies
-Add the required PHP repository:
-bash
-Copy code
+### Step 3: Install PHP and Dependencies
+- Add the required PHP repository:
+```sh
 sudo apt install software-properties-common -y
 sudo add-apt-repository ppa:ondrej/php -y
 sudo apt update
-Install PHP and dependencies:
-bash
-Copy code
+```
+- Install PHP and dependencies:
+```sh
 sudo apt install php libapache2-mod-php php-cli php-mysql php-curl php-json php-mbstring php-xml php-zip unzip -y
-Verify the PHP version:
-bash
-Copy code
+```
+- Verify the PHP version:
+```sh
 php -v
-Step 4: Install Composer
-Download and install Composer:
-bash
-Copy code
+```
+
+### Step 4: Install Composer
+- Download and install Composer:
+```sh
 sudo apt install curl -y
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
-Verify Composer installation:
-bash
-Copy code
+```
+
+- Verify Composer installation:
+```sh
 composer -v
+```
 Step 5: Install Laravel
 Navigate to the web root directory:
 bash
