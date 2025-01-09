@@ -69,7 +69,7 @@ sudo vim /etc/apache2/sites-available/laravel-app.conf
     ServerName your-domain.com   //or public ip of droplet
     DocumentRoot /var/www/html/laravel-app/public
 
-    <Directory /var/www/html/laravel-app>
+    <Directory /var/www/html/laravel-app/public>
         AllowOverride All
         Require all granted
     </Directory>
