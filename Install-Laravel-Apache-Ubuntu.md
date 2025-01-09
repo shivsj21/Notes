@@ -116,6 +116,14 @@ mysql -u root -p
 ```
 ```sql
 CREATE DATABASE laravel;
+```
+- Change the authentication plugin for the root user:
+```sql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Redhat2040!';
+```
+- Apply changes:
+```sql
+FLUSH PRIVILEGES;
 EXIT;
 ```
 
@@ -125,6 +133,7 @@ EXIT;
 http://your-domain.com
 ```
 You should see the Laravel welcome page.
+
 
 ### Step 10: Create a Simple Laravel Project
 #### Generate a Controller and Route
