@@ -88,7 +88,7 @@ sudo systemctl restart apache2
 ### Step 7: Update .env for Database Connection
 - Open the .env file:
 ```sh
-nano /var/www/html/laravel-app/.env
+vim /var/www/html/laravel-app/.env
 ```
 
 - Update the database details:
