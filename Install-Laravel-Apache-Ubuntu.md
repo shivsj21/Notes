@@ -42,28 +42,29 @@ sudo mv composer.phar /usr/local/bin/composer
 ```sh
 composer -v
 ```
-Step 5: Install Laravel
-Navigate to the web root directory:
-bash
-Copy code
+### Step 5: Install Laravel
+- Navigate to the web root directory:
+```sh
 cd /var/www/html
-Create a Laravel project:
-bash
-Copy code
+```
+- Create a Laravel project:
+```sh
 composer create-project --prefer-dist laravel/laravel laravel-app
-Set permissions for the Laravel directory:
-bash
-Copy code
+```
+
+- Set permissions for the Laravel directory:
+```sh
 sudo chown -R www-data:www-data /var/www/html/laravel-app
 sudo chmod -R 775 /var/www/html/laravel-app/storage /var/www/html/laravel-app/bootstrap/cache
-Step 6: Configure Apache for Laravel
-Create a new Apache virtual host configuration file:
-bash
-Copy code
-sudo nano /etc/apache2/sites-available/laravel-app.conf
-Add the following configuration:
-apache
-Copy code
+```
+
+### Step 6: Configure Apache for Laravel
+- Create a new Apache virtual host configuration file:
+```sh
+sudo vim /etc/apache2/sites-available/laravel-app.conf
+```
+- Add the following configuration:
+```sh
 <VirtualHost *:80>
     ServerName your-domain.com
     DocumentRoot /var/www/html/laravel-app/public
@@ -76,12 +77,14 @@ Copy code
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
-Enable the new configuration and mod_rewrite:
-bash
-Copy code
+```
+### Enable the new configuration and mod_rewrite:
+```sh
 sudo a2ensite laravel-app
 sudo a2enmod rewrite
 sudo systemctl restart apache2
+```
+
 Step 7: Update .env for Database Connection
 Open the .env file:
 bash
