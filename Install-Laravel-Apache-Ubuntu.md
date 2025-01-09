@@ -114,13 +114,12 @@ sudo mysql_secure_installation
 ```sh
 mysql -u root -p
 ```
-```sh
+```sql
 CREATE DATABASE laravel;
+EXIT;
 ```
 
-
-EXIT;
-Step 9: Test Laravel
+### Step 9: Test Laravel
 Navigate to your domain or droplet IP:
 arduino
 Copy code
