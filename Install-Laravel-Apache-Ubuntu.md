@@ -66,7 +66,7 @@ sudo vim /etc/apache2/sites-available/laravel-app.conf
 - Add the following configuration:
 ```sh
 <VirtualHost *:80>
-    ServerName your-domain.com   //or public ip of droplet
+    ServerName your-domain.com                       //or public ip of droplet
     DocumentRoot /var/www/html/laravel-app/public
 
     <Directory /var/www/html/laravel-app/public>
