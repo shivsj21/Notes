@@ -1,4 +1,4 @@
-# Step 1: Prepare Your Droplet
+### Step 1: Prepare Your Droplet
 - Connect to your droplet via SSH:
 ```sh
 ssh root@your-droplet-ip
@@ -8,7 +8,7 @@ ssh root@your-droplet-ip
 sudo apt update && sudo apt upgrade -y
 ```
 
-# Step 2: Install Apache
+### Step 2: Install Apache
 ```sh
 sudo apt install apache2 -y
 sudo systemctl enable apache2
