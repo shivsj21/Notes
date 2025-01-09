@@ -1,5 +1,5 @@
 # Step 1: Prepare Your Droplet
-- Connect to your droplet via SSH:
+1. Connect to your droplet via SSH:
 ```sh
 ssh root@your-droplet-ip
 ```
