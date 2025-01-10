@@ -128,8 +128,7 @@ EXIT;
 ```
 - Run migrations to ensure Laravel can connect to the database
 ```sh
-cd /var/www/html/laravel-app
-php artisan migrate
+cd /var/www/html/laravel-app && php artisan migrate
 ```
 
 ### Step 9: Test Laravel
