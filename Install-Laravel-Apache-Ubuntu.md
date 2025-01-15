@@ -140,7 +140,9 @@ php artisan make:controller HelloController
 ```
 - Open the controller file and add a method:
 ```sh
-// /var/www/html/laravel-app/app/Http/Controllers/HelloController.php
+sudo vim /var/www/html/laravel-app/app/Http/Controllers/HelloController.php 
+```
+```sh
 // Incide the class HelloController
 public function greet()
 {
@@ -149,6 +151,9 @@ public function greet()
 ```
 
 - Add a route in routes/web.php:
+```sh
+sudo vim /routes/web.php
+```  
 ```sh
 Route::get('/hello', [App\Http\Controllers\HelloController::class, 'greet']);
 ```
