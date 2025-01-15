@@ -1,3 +1,18 @@
+sudo certbot certonly --manual --preferred-challenges=dns --email shiv.m.arna@gmail.com  --server https://acme-v02.api.letsencrypt.org/directory --agree-tos -d siddhvastu.com -d *.siddhvastu.com
+
+_acme-challenge.siddhvastu.com.
+
+sAzWnEQEmmfdNE5__sl5eJ07tWhfVvP3UASZl_JhRRM
+
+IBToOfy0hOPZn7SIW_I-o0ZCo8iEqEAI5Z745bL95Ew
+
+-----------------------------------------------------------
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/siddhvastu.com/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/siddhvastu.com/privkey.pem
+This certificate expires on 2025-04-10.
+
+------------------------------------------------------------------------------
 <VirtualHost *:443>
     ServerName www.siddhvastu.com
 
