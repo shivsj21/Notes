@@ -15,13 +15,6 @@ sudo systemctl enable apache2
 sudo systemctl status apache2
 ```
 ### Step 3: Install PHP and Dependencies
-- Add the required PHP repository:
-```sh
-sudo apt install software-properties-common -y
-sudo add-apt-repository ppa:ondrej/php -y
-sudo apt update
-```
-- Install PHP and dependencies:
 ```sh
 sudo apt install php libapache2-mod-php php-cli php-mysql php-curl php-json php-mbstring php-xml php-zip unzip -y
 ```
