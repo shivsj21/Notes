@@ -152,7 +152,7 @@ public function greet()
 
 - Add a route in routes/web.php:
 ```sh
-sudo vim /routes/web.php
+sudo vim routes/web.php
 ```  
 ```sh
 Route::get('/hello', [App\Http\Controllers\HelloController::class, 'greet']);
