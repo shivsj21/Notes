@@ -1,7 +1,8 @@
-first add public ip in A record go.godaddy.com
-second setup Laravel in ubuntu as per gitrepo
-
+- First add public ip in A record go.godaddy.com
+- Second setup Laravel in ubuntu as per gitrepo
+```
 root@Laravel:~# vim /etc/apache2/sites-available/laravel-app.conf
+```
 root@Laravel:~# cat /etc/apache2/sites-available/laravel-app.conf
 <VirtualHost *:80>
     ServerName  test.siddhvastu.com 				//add domain name
