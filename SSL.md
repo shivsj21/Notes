@@ -1,5 +1,6 @@
 - First add public ip in A record go.godaddy.com
-- Second setup Laravel in ubuntu as per gitrepo
+- Second setup Laravel in ubuntu as per gitrepo 
+    https://github.com/shivarna1/Notes/blob/main/Install-Laravel-Apache-Ubuntu.md
 ```
 vim /etc/apache2/sites-available/laravel-app.conf
 ```
