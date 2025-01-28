@@ -131,6 +131,7 @@ This SOP provides step-by-step instructions for checking site availability, veri
    ```
 
 Or Use WINSCP
+
 2. **Set Correct Permissions:** Ensure files and directories have the appropriate ownership and permissions:
    ```bash
    sudo chown -R www-data:www-data /var/www/html/yourdomain.com/
