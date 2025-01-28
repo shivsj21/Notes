@@ -129,6 +129,8 @@ This SOP provides step-by-step instructions for checking site availability, veri
    ```bash
    sudo rsync -avz /local/path/to/application/ /var/www/html/yourdomain.com/
    ```
+                              or 
+Use WINSCP
 2. **Set Correct Permissions:** Ensure files and directories have the appropriate ownership and permissions:
    ```bash
    sudo chown -R www-data:www-data /var/www/html/yourdomain.com/
@@ -151,26 +153,34 @@ This SOP provides step-by-step instructions for checking site availability, veri
    ```bash
    sudo tail -f /var/log/apache2/access.log /var/log/apache2/error.log
    ```
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### 1. Install Certbot and the Apache Plugin
+1. **Update the package list:**
+   ```bash
+   sudo apt update
+   ```
+2. **Install Certbot and the Apache plugin:**
+   ```bash
+   sudo apt install certbot python3-certbot-apache
+   ```
 
-### 3.6 Optional: Force HTTPS Redirection
+### 2. Obtain and Install SSL Certificate
+1. **Run Certbot to generate the SSL certificate:**
+   ```bash
+   sudo certbot --apache -d yourdomain.com -d www.yourdomain.com
+   ```
+   - Certbot will prompt you to choose whether to redirect HTTP traffic to HTTPS. Choose the appropriate option (redirection is recommended).
+   - Certbot will automatically update your Apache configuration files.
 
-If Certbot did not automatically set up redirection from HTTP to HTTPS, add the following configuration to your Virtual Host for port 80:
+### 3. Check Certbot Auto-Renewal
+1. **Verify the systemd timer for Certbot:**
+   ```bash
+   sudo systemctl status certbot.timer
+   ```
+   - The output should indicate that the timer is active and running.
 
-```apache
-<VirtualHost *:80>
-    ServerName yourdomain.com
-    ServerAlias www.yourdomain.com
-
-    Redirect permanent / https://yourdomain.com/
-
-    ErrorLog ${APACHE_LOG_DIR}/yourdomain_error.log
-    CustomLog ${APACHE_LOG_DIR}/yourdomain_access.log combined
-</VirtualHost>
-```
-
-Reload Apache after making these changes:
-
-```bash
-sudo systemctl reload apache2
-```
-
+2. **Test the renewal process manually:**
+   ```bash
+   sudo certbot renew --dry-run
+   ```
+   - Ensure there are no errors during the dry run.
