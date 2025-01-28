@@ -129,8 +129,8 @@ This SOP provides step-by-step instructions for checking site availability, veri
    ```bash
    sudo rsync -avz /local/path/to/application/ /var/www/html/yourdomain.com/
    ```
-                              or 
-Use WINSCP
+
+Or Use WINSCP
 2. **Set Correct Permissions:** Ensure files and directories have the appropriate ownership and permissions:
    ```bash
    sudo chown -R www-data:www-data /var/www/html/yourdomain.com/
